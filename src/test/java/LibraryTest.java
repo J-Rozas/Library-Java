@@ -10,7 +10,7 @@ public class LibraryTest {
 
     @Before
     public void before() {
-        book1 = new Book("Title1", "Author1", "Genre1");
+        book1 = new Book("Title1", "Author1", "Genre1", 10);
         library = new Library("CodeClan library");
     }
 
@@ -18,5 +18,13 @@ public class LibraryTest {
     public void hasBooks() {
         library.addBook(book1);
         assertEquals(1, library.getNumberOfBooks());
+    }
+
+    @Test
+    public void shouldNotAddBookIfFullCapacity() {
+        for (int i = 0; i < 50; i++) {
+            library.addBook(book1);
+        }
+        assertEquals(10, library.getNumberOfBooks());
     }
 }
