@@ -11,11 +11,12 @@ public class LibraryTest {
     @Before
     public void before() {
         book1 = new Book("Title1", "Author1", "Genre1");
-        library = new Library();
+        library = new Library("CodeClan library");
     }
 
     @Test
     public void hasBooks() {
+        library.addBook(book1);
         assertEquals(1, library.getNumberOfBooks);
     }
 }
