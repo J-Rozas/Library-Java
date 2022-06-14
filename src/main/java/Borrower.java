@@ -16,4 +16,9 @@ public class Borrower {
     public int numberOfBorrowedBooks() {
         return this.collection.size();
     }
+
+    public void borrowBook(Book book, Library library) {
+        library.removeBook(book);
+        this.collection.add(book);
+    }
 }
