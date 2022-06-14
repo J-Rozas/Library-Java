@@ -19,6 +19,6 @@ public class BookTest {
 
     @Test
     public void hasAuthor() {
-        assertEquals("Author1", book.getAuthor(););
+        assertEquals("Author1", book.getAuthor());
     }
 }
