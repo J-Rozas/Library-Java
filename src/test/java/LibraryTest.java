@@ -31,7 +31,7 @@ public class LibraryTest {
     @Test
     public void shouldBeAbleToRemoveBook() {
         library.addBook(book1);
-        library.removeBook();
+        library.removeBook(book1);
         assertEquals(0, library.getNumberOfBooks());
     }
 }
