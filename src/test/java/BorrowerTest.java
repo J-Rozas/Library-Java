@@ -29,7 +29,7 @@ public class BorrowerTest {
 
     @Test
     public void shouldBeAbleToBorrowBook() {
-        library.borrowBook(book1);
+        borrower.borrowBook(book1, library);
         assertEquals(1, borrower.numberOfBorrowedBooks());
         assertEquals(0, library.getNumberOfBooks());
     }
