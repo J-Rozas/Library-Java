@@ -22,7 +22,6 @@ public class Library {
         return this.collection.size();
     }
 
-
     public void removeBook(Book book) {
         this.collection.remove(book);
     }
